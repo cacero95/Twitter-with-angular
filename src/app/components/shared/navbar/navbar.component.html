@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top flex-md-nowrap p-0 bg-light">
+    <!--navbar navbar-expand-md navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow-->
+    <a class="navbar-brand" href="#">
+        <img src="assets/img/twitter_logo_principal.jpg" class="img-thumbnail" width="30" height="30" alt=""> T-feels
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!--la clase active permite resaltar una etiqueta-->
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['home']">Home </a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['search']">Temas</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['contact']">Contacto</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" (click)="consultar('tecno')" href="#">Tecnologia</a>
+                    <a class="dropdown-item" (click)="consultar('humanidad')" href="#">Humanidad</a>
+                    <a class="dropdown-item" (click)="consultar('ambiental')" href="#">Ambiental</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Algo mas</a>
+                </div>
+            </li>
+
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <!--cuando ponemos #buscaTexto hacemos referencia a un alias que le queremos poner a un elemento
+              y asi podemos ingresar el valor que se ponga en caja de texto para poder buscarlo en la base de datos-->
+
+            <input class="form-control mr-sm-2" type="text" placeholder="Consulta" #buscarTexto>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+        </div>
+    </div>
+</nav>

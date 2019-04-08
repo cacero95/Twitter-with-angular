@@ -1,0 +1,38 @@
+<!--
+<ul>
+    <li *ngFor="let item of paises">
+        {{item.name}} - {{item.population | number}}
+    </li>
+
+
+</ul>
+-->
+
+<h1 class="text-center m-5">{{tema}}</h1>
+
+<div class="card-columns">
+    <div class="card animated fadeIn img-thumbnail">
+        <img src="assets/img/tecno.jpg" height="200" class="card-img-top" alt="tecno">
+        <div class="card-body text-center">
+            <h5 style="color:black">Tecnologia</h5>
+            <button (click)="consultar('tecno')" type="button" name="info" class="btn btn-dark">Information</button>
+
+        </div>
+    </div>
+    <div class="card animated fadeIn img-thumbnail">
+        <img src="assets/img/human.jpg" height="200" class="card-img-top" alt="tecno">
+        <div class="card-body text-center">
+            <h5 style="color:black">Humanidad</h5>
+            <button (click)="consultar('human')" type="button" name="info" class="btn btn-dark">Information</button>
+
+        </div>
+    </div>
+    <div class="card animated fadeIn img-thumbnail">
+        <img src="assets/img/ambiental.jpg" height="200" class="card-img-top" alt="tecno">
+        <div class="card-body text-center">
+            <h5 style="color:black">Ambiental</h5>
+            <button (click)="consultar('human')" type="button" name="info" class="btn btn-dark">Information</button>
+
+        </div>
+    </div>
+</div>
