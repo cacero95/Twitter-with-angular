@@ -10,7 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ContactComponent } from './components/contact/contact.component'
+import { ContactComponent } from './components/contact/contact.component';
+import { InfoComponent } from './components/info/info.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactComponent } from './components/contact/contact.component'
     ArtistaComponent,
     NavbarComponent,
     DashboardComponent,
-    ContactComponent
+    ContactComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
