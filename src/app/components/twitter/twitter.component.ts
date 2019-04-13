@@ -35,8 +35,9 @@ export class TwitterComponent implements OnInit {
         type:'hashtag'
       }
       this.http.post('https://vetcompany.herokuapp.com/twitter',busqueda)
-      .subscribe(data=>{
-        console.log(data);
+      .subscribe((data:any)=>{
+        this.tweets = data.cuerpo.statuses;
+        console.log(this.tweets);
       })
     }
     else {
