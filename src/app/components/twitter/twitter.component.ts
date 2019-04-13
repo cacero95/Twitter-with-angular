@@ -44,7 +44,7 @@ export class TwitterComponent implements OnInit {
         tema:this.tema_busqueda,
         type: 'tweets'
       }
-      this.http.post(`http://localhost:3001/twitter`,busqueda)
+      this.http.post(`https://vetcompany.herokuapp.com/twitter`,busqueda)
       .subscribe((data:any)=>{
         this.tweets = data.cuerpo.statuses;
         console.log(this.tweets);
