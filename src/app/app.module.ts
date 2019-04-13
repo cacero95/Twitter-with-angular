@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -11,7 +13,11 @@ import { SearchComponent } from './components/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { InfoComponent } from './components/info/info.component'
+import { InfoComponent } from './components/info/info.component';
+import { TwitterComponent } from './components/twitter/twitter.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -22,10 +28,13 @@ import { InfoComponent } from './components/info/info.component'
     NavbarComponent,
     DashboardComponent,
     ContactComponent,
-    InfoComponent
+    InfoComponent,
+    TwitterComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES,{useHash:true})
   ],

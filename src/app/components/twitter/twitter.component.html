@@ -1,0 +1,66 @@
+<br><br>
+
+
+<main class="animated fadeIn">
+    <section *ngIf="!resultado">
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Busca tu tema</label>
+            <input type="text" [(ngModel)]="tema_busqueda" class="form-control" #tema aria-describedby="emailHelp" placeholder="Tema">
+            <small id="emailHelp" class="form-text text-muted">Bucar opiniones usuarios en twitter.</small>
+        </div>
+        <div class="custom-control custom-switch">
+            <input [(ngModel)]="tick" type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">Buscar por hashtags</label>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">En que Lugar quires buscar</label>
+            <input type="type" [(ngModel)]="posicion" class="form-control" id="posicion" placeholder="Lugar">
+            <small id="emailHelp" class="form-text text-muted">En que lugar quires buscar los Tweets.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Que usuario quieres buscar</label>
+            <input type="text" [(ngModel)]="user" class="form-control" #tema aria-describedby="emailHelp" placeholder="Usuario">
+            <small id="emailHelp" class="form-text text-muted">Busca un usuario en Twitter.</small>
+        </div>
+
+
+
+        <button (click)="buscar()" type="button" class="btn btn-primary">Buscar</button>
+    </section>
+    <!--
+        seccion de la tabla
+    -->
+    <section *ngIf="resultado">
+
+        <button class="btn btn-primary" (click)="resultado = !resultado">
+            Volver
+        </button>
+        <h2>{{tema_busqueda}}</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Usuario</th>
+                        <th>Tweets</th>
+                        <th>lugar</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let tweet of tweets; let x = index;">
+                        <td>{{x}}</td>
+                        <td>{{tweet.user.name}}</td>
+                        <td>{{tweet.text}}</td>
+                        <td>{{tweet.user.location}}</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+</main>
