@@ -36,6 +36,7 @@ export class TwitterComponent implements OnInit {
       }
       this.http.post('https://vetcompany.herokuapp.com/twitter',busqueda)
       .subscribe((data:any)=>{
+        console.log(data);
         this.tweets = data.cuerpo.statuses;
         console.log(this.tweets);
       })
